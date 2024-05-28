@@ -32,8 +32,8 @@ jobs:
         with:
           useLockFile: false
 
-      - name: ▶️ Run validate script
-        run: npm run validate
+      - name: ▶️ Run test script
+        run: npm test
         env:
           FORCE_COLOR: true
 
