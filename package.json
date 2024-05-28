@@ -42,5 +42,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kolenkainc/react-ticket-conductor"
+  },
+  "bugs": {
+    "url": "https://github.com/kolenkainc/react-ticket-conductor/issues"
+  },
+  "homepage": "https://github.com/kolenkainc/react-ticket-conductor#readme"
 }
