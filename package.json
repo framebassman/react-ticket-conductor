@@ -50,5 +50,8 @@
   "bugs": {
     "url": "https://github.com/kolenkainc/react-ticket-conductor/issues"
   },
-  "homepage": "https://github.com/kolenkainc/react-ticket-conductor#readme"
+  "homepage": "https://github.com/kolenkainc/react-ticket-conductor#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
