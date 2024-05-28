@@ -1,6 +1,6 @@
 {
   "name": "react-ticket-conductor",
-  "version": "0.1.0",
+  "version": "0.0.0-semantically-released",
   "description": "React component for the checking tickets",
   "private": false,
   "dependencies": {
