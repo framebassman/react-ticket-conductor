@@ -46,6 +46,10 @@ jobs:
   release:
     needs: master
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write
     if:
       ${{ github.repository == 'kolenkainc/react-ticket-conductor' &&
       contains('refs/heads/master,refs/heads/beta,refs/heads/next,refs/heads/alpha',
@@ -74,7 +78,7 @@ jobs:
           branches: |
             [
               '+([0-9])?(.{+([0-9]),x}).x',
-              'main',
+              'master',
               'next',
               'next-major',
               {name: 'beta', prerelease: true},
