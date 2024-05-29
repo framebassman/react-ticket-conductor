@@ -1,66 +1,77 @@
 {
-  "editor.formatOnSave": true,
+  "files.associations": {
+    ".code-workspace": "jsonc",
+    ".eslintrc": "jsonc",
+    ".eslintrc*.json": "jsonc",
+    ".stylelintrc": "jsonc",
+    "stylelintrc": "jsonc",
+    "README": "markdown"
+  },
+  "search.useIgnoreFiles": true,
+  "search.exclude": {
+    "**/dist": true,
+    "**/*.log": true,
+    "**/*.pid": true,
+    "**/.git": true,
+    "**/node_modules": true
+  },
+  //
+  "editor.rulers": [80, 120],
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  //
+  "cSpell.diagnosticLevel": "Hint",
+  "eslint.run": "onType",
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "[css]": {
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
+  "[less]": {
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "eslint.workingDirectories": [
-    "/src",
-    "/tests"
-  ],
-  "npm.exclude": [
-    "**/dist"
-  ],
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  //
+  "json.format.enable": false,
+  "[json]": {
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
   },
-  "typescript.tsdk": "<workspace>\\node_modules\\typescript\\lib",
-  "todohighlight.isEnable": true,
-  "todohighlight.isCaseSensitive": true,
-  "todohighlight.keywords": [
-    "OPTIMIZE:",
-    "HACK:",
-    "DEBUG:",
-    {
-      "text": "BUG:",
-      "color": "#ecf0f1",
-      "backgroundColor": "firebrick",
-      "isWholeLine": false,
-      "regex": {
-        "pattern": "(?<=^|\"|\\s)BUG[:]?(?!\\w)"
-      }
-    },
-    {
-      "text": "NOTE:",
-      "color": "#ecf0f1",
-      "backgroundColor": "#0BB710",
-      "isWholeLine": false,
-      "regex": {
-        "pattern": "(?<=^|\"|\\s)NOTE[:]?(?!\\w)"
-      }
-    }
-  ],
-  "todohighlight.defaultStyle": {
-    "color": "#2196D2",
-    "backgroundColor": "none",
-    "cursor": "pointer"
+  "[jsonc]": {
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
   },
-  "todohighlight.exclude": [
-    "**/.devcontainer/**",
-    "**/.git/**",
-    "**/.github/**",
-    "**/.vscode/**",
-    "**/.husky/**",
-    "**/coverage/**",
-    "**/dist/**",
-    "**/build/**",
-    "**/docs/**",
-    "**/http/**",
-    "**/node_modules/**",
-  ],
-  "typescript.tsserver.maxTsServerMemory": 4072
+  "emmet.triggerExpansionOnTab": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

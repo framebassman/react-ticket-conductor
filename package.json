@@ -2,51 +2,49 @@
   "name": "react-ticket-conductor",
   "version": "0.0.0",
   "description": "React component for the checking tickets",
-  "private": false,
-  "type": "module",
-  "dependencies": {
-    "@modern-js/create": "^2.50.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^4.0.1"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^6.4.5",
-    "@testing-library/react": "^15.0.7",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.12",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false --coverage",
-    "eject": "react-scripts eject"
-  },
   "author": "Kolenka Inc",
   "license": "MIT",
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/es/index.js",
+  "scripts": {
+    "prepare": "modern build",
+    "dev": "modern dev",
+    "build": "modern build",
+    "build:watch": "modern build -w",
+    "reset": "rm -rf ./node_modules",
+    "lint": "modern lint",
+    "change": "modern change",
+    "bump": "modern bump",
+    "pre": "modern pre",
+    "change-status": "modern change-status",
+    "gen-release-note": "modern gen-release-note",
+    "release": "modern release",
+    "new": "modern new",
+    "upgrade": "modern upgrade"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/"
+  ],
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
+  "devDependencies": {
+    "@modern-js/eslint-config": "2.50.0",
+    "@modern-js/module-tools": "2.50.0",
+    "@types/node": "~16.11.7",
+    "lint-staged": "~13.1.0",
+    "prettier": "~2.8.1",
+    "typescript": "~5.0.4"
+  },
+  "sideEffects": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/kolenkainc/react-ticket-conductor"
@@ -56,6 +54,7 @@
   },
   "homepage": "https://github.com/kolenkainc/react-ticket-conductor#readme",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
