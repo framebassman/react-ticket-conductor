@@ -18,13 +18,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "prepare": "npm run link-es && npm run link-types",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "link-es": "node_modules/.bin/symlink-dir ../../dist/es node_modules/react-ticket-conductor",
-    "link-types": "node_modules/.bin/symlink-dir ../../dist/types node_modules/@types/react-ticket-conductor",
-    "link": "npm run link-es && npm run link-types"
+    "link-types": "node_modules/.bin/symlink-dir ../../dist/types node_modules/@types/react-ticket-conductor"
   },
   "eslintConfig": {
     "extends": [
