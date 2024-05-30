@@ -1,3 +1,6 @@
-export default function () {
-  return 'hello world';
-}
+import { TicketConductor } from './TicketConductor';
+
+export default {
+  namespaced: true,
+  TicketConductor,
+};
