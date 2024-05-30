@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from './logo.svg';
-import TicketConductor from 'react-ticket-conductor';
 import './App.css';
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         >
           Learn React
         </a>
-        <TicketConductor title="title" disabled={false}/>
       </header>
     </div>
   );
