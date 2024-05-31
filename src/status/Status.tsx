@@ -87,4 +87,5 @@ export const Status = ({
   );
 };
 
-export default connect((state: any) => state.turnstile)(Status);
+// export default connect((state: any) => state.turnstile)(Status);
+export default Status;
