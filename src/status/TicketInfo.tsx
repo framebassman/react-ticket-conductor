@@ -1,4 +1,4 @@
-export const TicketInfo = ({ label }: { label: string; status?: string }) => {
+export const TicketInfo = ({ label }: any) => {
   return (
     <div id="ticket-info" className="info">
       <span>

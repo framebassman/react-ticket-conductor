@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
+import { Button, TextField, Container, Box } from '@mui/material';
 
-import {
-  actionCreators,
-  TurnstileActions,
-} from '../../../store/Turnstile/actions';
-import { VerificationMethod } from '../../../store/Turnstile/verificationMethods';
-import Status from '../status/Status';
+import Status from '@/status/Status';
 import './TurnstileManual.css';
 
-const TurnstileManual = ({ verify }: TurnstileActions) => {
+const TurnstileManual = () => {
   const [ticketNumber, setTicketNumber] = useState('');
 
   return (
@@ -22,7 +13,8 @@ const TurnstileManual = ({ verify }: TurnstileActions) => {
       <form
         onSubmit={e => {
           e.preventDefault();
-          verify(ticketNumber, VerificationMethod.Manual);
+          console.log(ticketNumber);
+          // verify(ticketNumber, VerificationMethod.Manual);
         }}
       >
         <Box>
@@ -53,4 +45,5 @@ const TurnstileManual = ({ verify }: TurnstileActions) => {
   );
 };
 
-export default connect(() => ({}), actionCreators)(TurnstileManual);
+export default TurnstileManual;
+// export default connect(() => ({}), actionCreators)(TurnstileManual);

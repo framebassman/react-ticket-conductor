@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
 import throttle from 'lodash/throttle';
-import { connect } from 'react-redux';
 
-import {
-  actionCreators,
-  TurnstileActions,
-} from '../../../store/Turnstile/actions';
-import { VerificationMethod } from '../../../store/Turnstile/verificationMethods';
 import { Scanner } from './Scanner';
 import { beep } from './Beep';
-import Status from './../status/Status';
 import { DetectedBarcode } from './DetectedBarcode';
+import Status from '@/status/Status';
 import './Camera.css';
 
-class Camera extends Component<TurnstileActions> {
-  constructor(props: TurnstileActions) {
+class Camera extends Component {
+  constructor(props: any) {
     super(props);
     this._onDetected = throttle(this._onDetected.bind(this), 3000, {
       trailing: false,
@@ -24,7 +18,7 @@ class Camera extends Component<TurnstileActions> {
   _onDetected(detectedBarcode: DetectedBarcode) {
     beep();
     const { code } = detectedBarcode.codeResult;
-    this.props.verify(code, VerificationMethod.Barcode);
+    // this.props.verify(code, VerificationMethod.Barcode);
   }
 
   render() {
@@ -37,4 +31,5 @@ class Camera extends Component<TurnstileActions> {
   }
 }
 
-export default connect(() => ({}), actionCreators)(Camera);
+export default Camera;
+// export default connect(() => ({}), actionCreators)(Camera);

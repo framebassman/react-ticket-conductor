@@ -1,5 +1,5 @@
 import React from 'react';
-import Fab from '@mui/material/Fab';
+import { Fab } from '@mui/material';
 import { Check, Cancel, Scanner } from '@mui/icons-material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import green from '@mui/material/colors/green';
